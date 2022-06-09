@@ -1,30 +1,15 @@
 import React from 'react'
+import './testimonials.css'
 
-const Testimonials = () => {
+const Testimonials = (props) => {
   return (
-    <><div className="container-test">
-      <img className="img-test" src={require('../img/testimonio-emma.png')} alt="foto-emma" />
-      <div className="container-text-test">
-        <p className="nombre-test">Emma</p>
-        <p className="cargo-test">Ingeniera</p>
-        <p className="descripcion-test">lorem ipsum dolor sit amet, con</p></div>
-    </div>
-    
     <div className="container-test">
-        <img className="img-test" src={require('../img/testimonio-sarah.png')} alt="foto-sarah" />
-        <div className="container-text-test">
-          <p className="nombre-test">Sarah</p>
-          <p className="cargo-test">Ingeniera</p>
-          <p className="descripcion-test">lorem ipsum dolor sit amet, con</p></div>
-      </div>
-
-      <div className="container-test">
-        <img className="img-test" src={require('../img/testimonio-shawn.png')} alt="foto-shawn" />
-        <div className="container-text-test">
-          <p className="nombre-test">shawn</p>
-          <p className="cargo-test">Arquitecto</p>
-          <p className="descripcion-test">lorem ipsum dolor sit amet, con</p></div>
-      </div></>
+      <img className="img-test" src={props.img} alt="foto-emma" />
+      <div className="container-text-test">
+        <p className="nombre-test">{props.name}</p>
+        <p className="cargo-test">{props.cargo}</p>
+        <p className="descripcion-test"></p>{props.description}</div>
+    </div>
   )
 }
 
